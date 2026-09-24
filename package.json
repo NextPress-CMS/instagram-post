@@ -1,0 +1,41 @@
+{
+  "name": "@nextpress/plugin-instagram-post",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Archive Instagram posts into NextPress and publish NextPress content to Instagram.",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.ts",
+    "./api": "./src/api/index.ts",
+    "./services": "./src/services/index.ts",
+    "./schemas": "./src/schemas/settings.ts",
+    "./content": "./src/content/index.ts",
+    "./permissions": "./src/permissions/index.ts",
+    "./testing": "./src/api/fake-instagram-client.ts",
+    "./admin/dashboard": "./src/admin/dashboard.tsx",
+    "./admin/import": "./src/admin/import.tsx",
+    "./admin/settings": "./src/admin/settings.tsx",
+    "./admin/posts": "./src/admin/posts.tsx",
+    "./admin/publish-panel": "./src/admin/publish-panel.tsx"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nextpress/blocks": "workspace:*",
+    "@nextpress/core": "workspace:*",
+    "@nextpress/ui": "workspace:*",
+    "zod": "^3.23.0"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.14",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  }
+}
