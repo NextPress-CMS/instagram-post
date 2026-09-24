@@ -1,7 +1,7 @@
 # Host integration files
 
 The plugin's own code lives in `src/` and is self-contained. The files in this
-directory are the **host wiring** — they belong in your NextPress app, not in
+directory are the **host wiring**. They belong in your NextPress app, not in
 the plugin, and must be copied into place during installation.
 
 ## Why these are separate
@@ -48,7 +48,7 @@ pnpm install
 
 - `adapters.ts` is the **only** place plugin interfaces are bound to Prisma.
   Every query there is filtered by `siteId`, which is what enforces multi-tenant
-  isolation — including on the scheduled path.
+  isolation, including on the scheduled path.
 - All route handlers enforce permissions with `can()` before doing any work.
   Hiding a button is never the security boundary.
 - The cron route reuses your existing `CRON_SECRET`, matching
